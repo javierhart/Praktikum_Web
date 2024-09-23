@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #524f4f;
+    color: white;
+}
+
+.logo-title h1 {
+    font-size: 32px;
+    color: white;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .logo-title h1 {
+        font-size: 24px;
+    }
+}
+
+nav {
+    position: relative;
+}
+
+.nav-container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 3;
+}
+
+.hamburger {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.bar {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    transition: right 0.3s ease;
+    z-index: 2;
+} 
+
+.menu.active {
+    right: 0;
+}
+
+
+nav ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li {
+    margin: 30px 0; 
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    padding: 10px; 
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; 
+    }
+
+    .menu {
+        position: static; 
+        right: 0; 
+        width: auto; 
+    }
+}
+.mode-toggle {
+    padding: 5px 10px; 
+    background-color: #444; 
+    color: white; 
+    border: none; 
+    position: absolute; 
+    right: 25px; 
+    top: 60px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1; 
+}
+
+
+.mode-toggle:hover {
+    background-color: #555; 
+    transform: scale(1.05); 
+}
+
+body.dark-mode .mode-toggle {
+    background-color: #222; 
+    color: #f9f9f9; 
+}
+
+.theater-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 50%;
+    max-height: 20%;
+    margin: auto;
+}
+
+.fade {
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+
+img {
+    width: 100%;
+}
+
+.ticket-button {
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    max-width: 90%; 
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.about-section {
+    background-color: #b6b5b5;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid var(--border-light);
+    transition: border-color 0.3s;
+}
+
+.about-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.about-section p span {
+    font-weight: bold;
+    display: block; 
+    margin-top: 10px; 
+}
+
+body.dark-mode .about-section {
+    background-color: #222;
+    color: #f8f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.akun_sosmed a i{
+    margin: 0 10px;
+    color: white;
+}
+
+body.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+footer.dark-mode {
+    background-color: #222;
+}
+
+body.light-mode {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
