@@ -1,0 +1,221 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column; /* Ensures the title is above the form */
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-pesan {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-pesan label {
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-pesan input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.form-pesan input:focus {
+    border-color: #6e45e2;
+    outline: none;
+}
+
+.submit-button, .edit-button, .delete-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px; /* Space between buttons */
+}
+
+.submit-button {
+    background-color: #6e45e2;
+}
+
+.submit-button:hover {
+    background-color: #583bbf;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+.edit-button {
+    background-color: #2196F3; /* Blue color */
+}
+
+.edit-button:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+.delete-button {
+    background-color: #f44336; /* Red color */
+}
+
+.delete-button:hover {
+    background-color: #e53935; /* Darker red on hover */
+    transform: translateY(-2px);
+}
+
+@media (max-width: 400px) {
+    .form-pesan {
+        width: 90%;
+    }
+}
+
+.data-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #6e45e2;
+    color: white;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.edit-button {
+    background-color: #2196F3; /* Blue color */
+}
+
+.edit-button:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+.delete-button {
+    background-color: #f44336; /* Red color */
+}
+
+.delete-button:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
+.submit-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #6e45e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.submit-button:hover {
+    background-color: #583bbf;
+}
+
+.form-edit {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-edit label {
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-edit input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.form-edit input:focus {
+    border-color: #6e45e2;
+    outline: none;
+}
+
+button[type="submit"], .submit-button {
+    padding: 10px 20px;
+    background-color: #6e45e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Allow the button to be inline with text */
+}
+
+button[type="submit"]:hover, .submit-button:hover {
+    background-color: #583bbf;
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active, .submit-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 400px) {
+    .form-edit {
+        width: 90%;
+    }
+}
