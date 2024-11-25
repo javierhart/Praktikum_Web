@@ -1,0 +1,109 @@
+/* General Reset */
+body, h1, h2, p, ul, li, a, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+ 
+  /* Main Content */
+  main {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .order-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-summary h2 {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #0078FF;
+  }
+  
+  .order-summary form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .order-summary input, 
+  .order-summary select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .order-details .order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .send-button {
+    background-color: #0078FF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .send-button .icon {
+    margin-left: 5px;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .paper-plane {
+    position: relative;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: cover;
+    transition: transform 0.3s ease;
+}
+
+.send-button {
+    background-color: #0078FF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px 10px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.send-button:hover .paper-plane {
+    transform: translateX(5px);
+}
+

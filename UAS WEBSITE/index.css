@@ -1,0 +1,379 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #1E3A8A;
+    /* Similar dark blue background color */
+    color: #FFFFFF;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    color: #f9f9f9;
+}
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #1E3A8A;
+        text-align: center;
+        z-index: 5;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show menu when active */
+    }
+
+    .menu-toggle {
+        display: flex;
+        /* Show hamburger icon on small screens */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('./WEB US ASET/Labuan Cermin.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center; /* Memastikan gambar di tengah */
+    background-size: cover;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 5;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #005bb5;
+}
+
+/* Background Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* Responsive Hero Section */
+.hero-content h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive for category-bar */
+@media screen and (max-width: 1024px) {
+    .category-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        margin-bottom: 20px;
+    }
+}
+
+/* Recommendations Section */
+.recommendations1 {
+    background-color: #1E3A8A;
+    color: #fff;
+    padding: 50px 20px;
+    font-size: 1.5em;
+
+}
+
+.recommendations2 {
+    background-color: #fff;
+    color: #1E3A8A;
+    padding: 50px 20px;
+    font-size: 1.5em;
+
+}
+
+.recommendations1 h1 {
+    text-align: center
+}
+
+.recommendations1 h2 {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.recommendations2 h2 {
+    font-size: 1em;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.section-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.ride-card,
+.show-card,
+.resto-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 450px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 2s ease;
+    text-align: center;
+}
+
+.hotel-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 450px;
+    margin-right: 20px;
+    margin-left: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 2s ease;
+    text-align: center;
+}
+
+.ride-card img,
+.show-card img,
+.hotel-card img,
+.resto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 2s ease;
+}
+
+.ride-card img:hover,
+.show-card img:hover,
+.hotel-card img:hover,
+.resto-card img:hover {
+    transform: scale(1.1);
+}
+
+.ride-card,
+.show-card,
+.hotel-card,
+.resto-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 450px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ride-card h3,
+.show-card h3,
+.hotel-card h3,
+.resto-card h3 {
+    font-size: 1.3rem;
+    padding: 15px;
+    color: #222;
+}
+
+.ride-card p,
+.show-card p,
+.hotel-card p,
+.resto-card p {
+    font-size: 1.2rem;
+    padding: 0 10px 10px 20px;
+    color: #666;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+
+    .ride-card,
+    .show-card,
+    .hotel-card,
+    .resto-card {
+        min-width: 250px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .category-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.store-item {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 250px;
+    margin: 0 10px;
+}
+
+.store-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.store-item h3 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.recommendations-str {
+    background-color: #1E3A8A;
+    padding: 50px 20px;
+
+}
+
+.recommendations-str h2 {
+    color: #fff;
+}
+
+
+
+.category-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    background-color: #1E3A8A;
+    position: relative;
+    overflow: hidden;
+}
+
+.category img {
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    display: block; 
+    margin: 10px auto; 
+}
+.category p {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: normal;
+    max-width: 150px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .category-bar {
+        flex-wrap: wrap;
+        /* Pada layar kecil, elemen akan membungkus */
+    }
+}
